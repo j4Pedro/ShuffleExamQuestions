@@ -84,7 +84,8 @@ public class Generator {
             	Question examQuestion = examQuestions.get(i);
                 writer.println((i + 1) + "." + examQuestion.getQuestion());
                 for (int j = 0; j < examQuestion.getOptions().length; j++) {
-                    writer.println("(" + (char) ('A' + j) + ")" + examQuestion.getOptions()[j]);
+//                    writer.println("(" + (char) ('A' + j) + ")" + examQuestion.getOptions()[j]);
+                	writer.printf("(%s)%s\t\t",(char) ('A' + j)  , examQuestion.getOptions()[j]);
                 }
                 writer.println(); // Empty line between questions
             }
